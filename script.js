@@ -1,75 +1,142 @@
 const shortcutsData = [
-  // 🧰 Esenciales
+  // 🧰 BÁSICOS Y ESENCIALES
   { title: "Deshacer", desc: "Revierte la última acción realizada.", cat: "bas", win: "Ctrl + Z", mac: "Cmd + Z", kw: "revertir atras cancel" },
   { title: "Rehacer", desc: "Repite la última acción deshecha.", cat: "bas", win: "Ctrl + Y (o Ctrl + Shift + Z)", mac: "Cmd + Shift + Z", kw: "repetir adelante" },
-  { title: "Copiar", desc: "Copia el contenido de la celda o rango seleccionado.", cat: "bas", win: "Ctrl + C", mac: "Cmd + C", kw: "duplicar portapapeles" },
-  { title: "Cortar", desc: "Mueve el contenido de la celda o rango seleccionado.", cat: "bas", win: "Ctrl + X", mac: "Cmd + X", kw: "mover relocalizar" },
+  { title: "Copiar", desc: "Copia el contenido de la celda o rango.", cat: "bas", win: "Ctrl + C", mac: "Cmd + C", kw: "duplicar portapapeles" },
+  { title: "Cortar", desc: "Mueve el contenido de la celda o rango.", cat: "bas", win: "Ctrl + X", mac: "Cmd + X", kw: "mover relocalizar" },
   { title: "Pegar", desc: "Inserta lo que tienes en el portapapeles.", cat: "bas", win: "Ctrl + V", mac: "Cmd + V", kw: "insertar portapapeles" },
-  { title: "Imprimir", desc: "Abre el menú contextual de impresión y vista previa.", cat: "bas", win: "Ctrl + P", mac: "Cmd + P", kw: "impresora papel pdf vista previa" },
-  { title: "Guardar como", desc: "Abre el cuadro de diálogo para guardar el archivo con otro nombre.", cat: "bas", win: "F12", mac: "Cmd + Shift + S", kw: "save as exportar duplicar" },
-  { title: "Hipervínculo", desc: "Inserta un enlace dentro de la celda seleccionada.", cat: "bas", win: "Ctrl + K", mac: "Cmd + K", kw: "link enlace url web" },
-  { title: "Revisar Ortografía", desc: "Revisa el texto del libro en busca de errores.", cat: "bas", win: "F7", mac: "Fn + F7", kw: "gramatica texto corregir" },
-  { title: "Mostrar / Ocultar Cinta", desc: "Expande o contrae la cinta de opciones para ganar espacio.", cat: "bas", win: "Ctrl + F1", mac: "Cmd + Option + R", kw: "menu barra ribbon" },
+  { title: "Imprimir", desc: "Abre el menú de impresión y vista previa.", cat: "bas", win: "Ctrl + P", mac: "Cmd + P", kw: "impresora papel pdf" },
+  { title: "Guardar como", desc: "Abre el cuadro para guardar con otro nombre.", cat: "bas", win: "F12", mac: "Cmd + Shift + S", kw: "save as exportar duplicar" },
+  { title: "Hipervínculo", desc: "Inserta un enlace web o de documento.", cat: "bas", win: "Ctrl + K", mac: "Cmd + K", kw: "link enlace url web" },
+  { title: "Revisar Ortografía", desc: "Revisa errores ortográficos en la hoja.", cat: "bas", win: "F7", mac: "F7", kw: "gramatica texto corregir abc" },
+  { title: "Mostrar / Ocultar Cinta", desc: "Expande o contrae la cinta de opciones.", cat: "bas", win: "Ctrl + F1", mac: "Cmd + Option + R", kw: "menu barra ribbon" },
+  { title: "Ayuda de Excel", desc: "Abre el panel de ayuda de Microsoft.", cat: "bas", win: "F1", mac: "Cmd + ?", kw: "soporte manual f1" },
+  { title: "Búsqueda Inteligente", desc: "Abre el panel de búsqueda general (Tell Me).", cat: "bas", win: "Alt + Q", mac: "N/A", kw: "bombillo buscar accion" },
+  { title: "Pegado Especial", desc: "Abre el menú avanzado para pegar valores o formatos.", cat: "bas", win: "Ctrl + Alt + V", mac: "Cmd + Ctrl + V", kw: "valores transparente formatos especiales" },
+  { title: "Pegar como Valores", desc: "Pega directamente sin formatos ni fórmulas (Excel 365).", cat: "bas", win: "Ctrl + Shift + V", mac: "Cmd + Shift + V", kw: "solo texto plano valor" },
   
-  // Navegación
-  { title: "Salto al Límite de Datos", desc: "Mueve el cursor instantáneamente hasta el extremo del bloque con datos contiguos.", cat: "nav", win: "Ctrl + Flechas", mac: "Cmd + Flechas", kw: "saltar mover fin frontera" },
-  { title: "Extender Selección", desc: "Selecciona todas las celdas desde la posición actual hasta el límite de datos.", cat: "nav", win: "Ctrl + Shift + Flechas", mac: "Cmd + Shift + Flechas", kw: "resaltar rango conjunto" },
-  { title: "Ir a Celda Inicial A1", desc: "Traslada el cursor a la primera celda del lienzo (A1) desde cualquier lugar.", cat: "nav", win: "Ctrl + Inicio", mac: "Cmd + Fn + Flecha Izquierda", kw: "arriba principio inicio" },
-  { title: "Ir a Última Celda Activa", desc: "Salta a la última celda utilizada dentro de la hoja de cálculo.", cat: "nav", win: "Ctrl + Fin", mac: "Cmd + Fn + Flecha Derecha", kw: "final abajo fondo" },
-  { title: "Seleccionar Fila Completa", desc: "Resalta de extremo a extremo la fila donde se ubica la celda activa.", cat: "nav", win: "Shift + Espacio", mac: "Shift + Espacio", kw: "horizontal linea" },
-  { title: "Seleccionar Columna Completa", desc: "Resalta verticalmente toda la columna de la celda activa.", cat: "nav", win: "Ctrl + Espacio", mac: "Ctrl + Espacio", kw: "vertical campo" },
-  { title: "Seleccionar Solo Celdas Visibles", desc: "Ignora celdas u ocultaciones por filtro al copiar.", cat: "nav", win: "Alt + ;", mac: "Cmd + Shift + Z", kw: "filtro ocultas descarte" },
-  { title: "Ir a Especial (Celdas en blanco/fórmulas)", desc: "Abre el menú para aislar celdas en blanco, constantes o fórmulas.", cat: "nav", win: "F5 (luego Alt + E)", mac: "F5", kw: "vacios constantes errores" },
-  { title: "Cambiar de Hoja", desc: "Navega secuencialmente entre las diferentes pestañas del libro.", cat: "nav", win: "Ctrl + AvPág / RePág", mac: "Fn + Ctrl + Abajo / Arriba", kw: "pestana libro navegar" },
+  // 🧭 NAVEGACIÓN Y SELECCIÓN
+  { title: "Salto al Límite", desc: "Mueve el cursor hasta el extremo del bloque de datos.", cat: "nav", win: "Ctrl + Flechas", mac: "Cmd + Flechas", kw: "saltar mover fin frontera" },
+  { title: "Extender Selección", desc: "Selecciona celdas hasta el límite de datos.", cat: "nav", win: "Ctrl + Shift + Flechas", mac: "Cmd + Shift + Flechas", kw: "resaltar rango conjunto" },
+  { title: "Ir a A1 (Inicio)", desc: "Traslada el cursor a la primera celda (A1).", cat: "nav", win: "Ctrl + Inicio", mac: "Cmd + Fn + Flecha Izquierda", kw: "arriba principio inicio" },
+  { title: "Ir a Última Celda", desc: "Salta a la última celda utilizada de la hoja.", cat: "nav", win: "Ctrl + Fin", mac: "Cmd + Fn + Flecha Derecha", kw: "final abajo fondo" },
+  { title: "Seleccionar Fila Completa", desc: "Resalta la fila entera de la celda activa.", cat: "nav", win: "Shift + Espacio", mac: "Shift + Espacio", kw: "horizontal linea" },
+  { title: "Seleccionar Columna Completa", desc: "Resalta verticalmente toda la columna.", cat: "nav", win: "Ctrl + Espacio", mac: "Ctrl + Espacio", kw: "vertical campo" },
+  { title: "Seleccionar Toda la Hoja", desc: "Resalta todas las celdas del documento.", cat: "nav", win: "Ctrl + E (Español) / Ctrl + A (Inglés)", mac: "Cmd + A", kw: "todo global completo" },
+  { title: "Seleccionar Región Actual", desc: "Selecciona el bloque contiguo de datos completo.", cat: "nav", win: "Ctrl + * (Asterisco)", mac: "Cmd + Shift + *", kw: "bloque matriz datos" },
+  { title: "Solo Celdas Visibles", desc: "Selecciona ignorando las celdas ocultas.", cat: "nav", win: "Alt + ;", mac: "Cmd + Shift + Z", kw: "filtro ocultas descarte" },
+  { title: "Ir a...", desc: "Abre el menú para saltar a una celda específica.", cat: "nav", win: "F5 (o Ctrl + I)", mac: "F5 (o Fn + F5)", kw: "saltar especial buscar" },
+  { title: "Ir a Especial", desc: "Aislar celdas en blanco, errores o fórmulas.", cat: "nav", win: "F5 (luego Alt + E)", mac: "F5 (luego Alt + E)", kw: "vacios constantes aislar" },
+  { title: "Cambiar a Hoja Siguiente", desc: "Navega a la pestaña de la derecha.", cat: "nav", win: "Ctrl + AvPág", mac: "Fn + Ctrl + Abajo", kw: "pestana libro navegar derecha" },
+  { title: "Cambiar a Hoja Anterior", desc: "Navega a la pestaña de la izquierda.", cat: "nav", win: "Ctrl + RePág", mac: "Fn + Ctrl + Arriba", kw: "pestana libro navegar izquierda" },
+  { title: "Volver a Celda Activa", desc: "Centra la vista en la celda seleccionada actualmente.", cat: "nav", win: "Ctrl + Retroceso", mac: "Cmd + Delete", kw: "centrar volver enfocar" },
+  { title: "Siguiente Borde de Rango", desc: "Navega por las esquinas del rango seleccionado.", cat: "nav", win: "Ctrl + . (Punto)", mac: "Ctrl + .", kw: "esquinas bordes rotar" },
+  { title: "Desplazarse una Pantalla Arriba/Abajo", desc: "Mueve la vista una página completa.", cat: "nav", win: "RePág / AvPág", mac: "Fn + Arriba / Abajo", kw: "scroll página salto" },
+  { title: "Desplazarse una Pantalla Izq/Der", desc: "Mueve la vista horizontalmente.", cat: "nav", win: "Alt + AvPág / RePág", mac: "Fn + Option + Abajo / Arriba", kw: "scroll horizontal lado" },
   
-  // Edición
-  { title: "Editar Celda Activa", desc: "Entra en modo de edición situando el cursor al final del contenido existente.", cat: "edit", win: "F2", mac: "Ctrl + U (o Fn + F2)", kw: "modificar escribir texto" },
-  { title: "Fijar Referencia ($)", desc: "Alterna entre referencias absolutas, relativas y mixtas ($A$1, A$1, $A1).", cat: "edit", win: "F4", mac: "Cmd + T", kw: "dolar fijar candado formula" },
-  { title: "Insertar Fecha Estática", desc: "Estampa la fecha actual del sistema dentro de la celda.", cat: "edit", win: "Ctrl + ;", mac: "Ctrl + ;", kw: "dia hoy calendario" },
-  { title: "Insertar Hora Estática", desc: "Estampa la hora exacta actual dentro de la celda.", cat: "edit", win: "Ctrl + Shift + :", mac: "Cmd + ;", kw: "tiempo reloj minuto" },
-  { title: "Salto de Línea en Celda", desc: "Permite escribir en una segunda línea dentro de la misma celda.", cat: "edit", win: "Alt + Enter", mac: "Ctrl + Option + Enter", kw: "parrafo multilinea enter" },
-  { title: "Rellenar Hacia Abajo", desc: "Copia la celda superior en todas las celdas seleccionadas abajo.", cat: "edit", win: "Ctrl + J (Español) / Ctrl + D (Inglés)", mac: "Cmd + D", kw: "duplicar abajo copiar" },
-  { title: "Rellenar a la Derecha", desc: "Copia la celda de la izquierda en el rango seleccionado hacia la derecha.", cat: "edit", win: "Ctrl + D (Español) / Ctrl + R (Inglés)", mac: "Cmd + R", kw: "duplicar derecha copiar" },
-  { title: "Relleno Rápido (Flash Fill)", desc: "Extrae o concatena datos detectando patrones automáticamente.", cat: "edit", win: "Ctrl + E", mac: "Cmd + E", kw: "patron separar extraer nombres" },
-  { title: "Pegado Especial", desc: "Abre el menú para pegar únicamente Valores, Formatos o Fórmulas.", cat: "edit", win: "Ctrl + Alt + V", mac: "Cmd + Ctrl + V", kw: "valores transparente solo fórmulas" },
-  { title: "Entrada Multicelular Simultánea", desc: "Llena todo el rango seleccionado con la fórmula o valor ingresado.", cat: "edit", win: "Ctrl + Enter", mac: "Ctrl + Return", kw: "llenar lote masivo" },
+  // ✏️ EDICIÓN Y CAPTURA
+  { title: "Editar Celda", desc: "Entra en modo de edición.", cat: "edit", win: "F2", mac: "Ctrl + U (o Fn + F2)", kw: "modificar escribir texto" },
+  { title: "Fijar Referencia ($)", desc: "Alterna referencias absolutas ($A$1) y relativas.", cat: "edit", win: "F4", mac: "Cmd + T", kw: "dolar fijar candado formula" },
+  { title: "Insertar Fecha Estática", desc: "Estampa la fecha actual en la celda.", cat: "edit", win: "Ctrl + ;", mac: "Ctrl + ;", kw: "dia hoy calendario" },
+  { title: "Insertar Hora Estática", desc: "Estampa la hora exacta actual.", cat: "edit", win: "Ctrl + Shift + :", mac: "Cmd + ;", kw: "tiempo reloj minuto" },
+  { title: "Salto de Línea en Celda", desc: "Escribe en una segunda línea dentro de la celda.", cat: "edit", win: "Alt + Enter", mac: "Ctrl + Option + Enter", kw: "parrafo multilinea enter" },
+  { title: "Rellenar Hacia Abajo", desc: "Copia la celda superior hacia abajo.", cat: "edit", win: "Ctrl + J (Español) / Ctrl + D (Inglés)", mac: "Cmd + D", kw: "duplicar abajo copiar" },
+  { title: "Rellenar a la Derecha", desc: "Copia la celda de la izquierda a la derecha.", cat: "edit", win: "Ctrl + D (Español) / Ctrl + R (Inglés)", mac: "Cmd + R", kw: "duplicar derecha copiar" },
+  { title: "Relleno Rápido (Flash Fill)", desc: "Extrae o concatena datos detectando patrones.", cat: "edit", win: "Ctrl + E", mac: "Cmd + E", kw: "patron separar extraer nombres ia" },
+  { title: "Llenado Multicelular", desc: "Llena todo el rango con el mismo valor/fórmula.", cat: "edit", win: "Ctrl + Enter", mac: "Ctrl + Return", kw: "llenar lote masivo simultaneo" },
+  { title: "Insertar Nota (Comentario)", desc: "Abre una nota clásica en la celda.", cat: "edit", win: "Shift + F2", mac: "Shift + F2", kw: "apunte revisar postit" },
+  { title: "Eliminar Celda (Retroceso)", desc: "Borra el contenido de la celda activa.", cat: "edit", win: "Supr (Delete)", mac: "Delete", kw: "borrar vaciar limpiar" },
+  { title: "Borrar Formato y Todo", desc: "No tiene atajo directo, abre el menú de borrado.", cat: "edit", win: "Alt + O + B + T (Secuencia)", mac: "N/A", kw: "limpiar absoluto reset" },
+  { title: "Autocompletar de Columna", desc: "Muestra lista desplegable con valores de la columna.", cat: "edit", win: "Alt + Flecha Abajo", mac: "Option + Flecha Abajo", kw: "desplegable sugerencias historial" },
+  { title: "Copiar Fórmula Superior", desc: "Copia la fórmula exacta de arriba sin calcular.", cat: "edit", win: "Ctrl + ' (Comilla)", mac: "Ctrl + '", kw: "clon formula exacto" },
+  { title: "Copiar Valor Superior", desc: "Copia el valor (resultado) de la celda de arriba.", cat: "edit", win: "Ctrl + Shift + \"", mac: "Ctrl + Shift + \"", kw: "clon resultado literal" },
   
-  // Formato
-  { title: "Menú Formato de Celdas", desc: "Despliega el panel completo para fuentes, bordes, alineación y números.", cat: "fmt", win: "Ctrl + 1", mac: "Cmd + 1", kw: "propiedades bordes color estilo" },
-  { title: "Formato Moneda ($)", desc: "Aplica formato monetario con dos posiciones decimales inmediatamente.", cat: "fmt", win: "Ctrl + Shift + $", mac: "Ctrl + Shift + $", kw: "dinero peso dolar euro" },
-  { title: "Formato Porcentaje (%)", desc: "Convierte el valor numérico en porcentaje sin decimales.", cat: "fmt", win: "Ctrl + Shift + %", mac: "Ctrl + Shift + %", kw: "porcentual tasa ratio" },
-  { title: "Formato Fecha (DD-MM-AA)", desc: "Aplica el formato estándar de fecha al número seleccionado.", cat: "fmt", win: "Ctrl + Shift + #", mac: "Ctrl + Shift + #", kw: "dia mes ano" },
-  { title: "Insertar Filas / Columnas", desc: "Abre el cuadro para insertar celdas o agrega la estructura seleccionada.", cat: "fmt", win: "Ctrl + +", mac: "Cmd + Shift + +", kw: "agregar sumar nueva" },
-  { title: "Eliminar Filas / Columnas", desc: "Elimina las celdas, filas o columnas previamente resaltadas.", cat: "fmt", win: "Ctrl + -", mac: "Cmd + -", kw: "quitar borrar remover" },
-  { title: "Ocultar Filas", desc: "Oculta temporalmente la visibilidad de las filas seleccionadas.", cat: "fmt", win: "Ctrl + 9", mac: "Cmd + (", kw: "invisibilizar esconder" },
-  { title: "Ocultar Columnas", desc: "Oculta temporalmente la visibilidad de las columnas seleccionadas.", cat: "fmt", win: "Ctrl + 0", mac: "Cmd + )", kw: "invisibilizar esconder" },
+  // 🎨 FORMATO DE CELDAS
+  { title: "Menú Formato de Celdas", desc: "Panel completo para fuentes, bordes y números.", cat: "fmt", win: "Ctrl + 1", mac: "Cmd + 1", kw: "propiedades bordes color estilo" },
+  { title: "Formato Moneda ($)", desc: "Aplica formato de dinero con decimales.", cat: "fmt", win: "Ctrl + Shift + $", mac: "Ctrl + Shift + $", kw: "dinero peso dolar euro" },
+  { title: "Formato Porcentaje (%)", desc: "Convierte a porcentaje sin decimales.", cat: "fmt", win: "Ctrl + Shift + %", mac: "Ctrl + Shift + %", kw: "porcentual tasa ratio" },
+  { title: "Formato Número General", desc: "Restaura la celda a formato general (sin formato).", cat: "fmt", win: "Ctrl + Shift + ~", mac: "Ctrl + Shift + ~", kw: "reset normalizar basico" },
+  { title: "Formato Fecha (DD-MMM-AA)", desc: "Aplica formato estándar de fecha.", cat: "fmt", win: "Ctrl + Shift + #", mac: "Ctrl + Shift + #", kw: "dia mes ano" },
+  { title: "Formato Hora", desc: "Aplica formato de hora con AM/PM.", cat: "fmt", win: "Ctrl + Shift + @", mac: "Ctrl + Shift + @", kw: "reloj minutos am pm" },
+  { title: "Formato Número (2 decimales)", desc: "Aplica formato numérico con separador de miles.", cat: "fmt", win: "Ctrl + Shift + ! (Admiración)", mac: "Ctrl + Shift + !", kw: "miles comas decimales" },
+  { title: "Insertar Celdas/Filas", desc: "Cuadro para agregar columnas o filas.", cat: "fmt", win: "Ctrl + +", mac: "Cmd + Shift + +", kw: "agregar sumar nueva" },
+  { title: "Eliminar Celdas/Filas", desc: "Elimina las celdas o estructura seleccionada.", cat: "fmt", win: "Ctrl + -", mac: "Cmd + -", kw: "quitar borrar remover" },
+  { title: "Ocultar Filas", desc: "Oculta temporalmente la fila activa.", cat: "fmt", win: "Ctrl + 9", mac: "Cmd + 9", kw: "invisibilizar esconder" },
+  { title: "Mostrar Filas Ocultas", desc: "Desoculta las filas del rango seleccionado.", cat: "fmt", win: "Ctrl + Shift + (", mac: "Cmd + Shift + (", kw: "revelar ver aparecer" },
+  { title: "Ocultar Columnas", desc: "Oculta temporalmente la columna activa.", cat: "fmt", win: "Ctrl + 0", mac: "Cmd + 0", kw: "invisibilizar esconder" },
+  { title: "Mostrar Columnas Ocultas", desc: "Desoculta las columnas del rango seleccionado.", cat: "fmt", win: "Ctrl + Shift + )", mac: "Cmd + Shift + )", kw: "revelar ver aparecer" },
+  { title: "Negrita", desc: "Aplica o quita el formato de negrita.", cat: "fmt", win: "Ctrl + N (Español) / Ctrl + B", mac: "Cmd + B", kw: "bold grueso destacar" },
+  { title: "Cursiva", desc: "Aplica o quita formato de letra cursiva.", cat: "fmt", win: "Ctrl + K (Español) / Ctrl + I", mac: "Cmd + I", kw: "italic inclinada" },
+  { title: "Subrayado", desc: "Aplica subrayado al texto.", cat: "fmt", win: "Ctrl + S (Español) / Ctrl + U", mac: "Cmd + U", kw: "linea abajo underline" },
+  { title: "Tachado", desc: "Aplica una línea tachando el texto de la celda.", cat: "fmt", win: "Ctrl + 5", mac: "Cmd + Shift + X", kw: "cancelado linea cruzado" },
+  { title: "Añadir Borde Exterior", desc: "Aplica un marco negro simple al rango.", cat: "fmt", win: "Ctrl + Shift + &", mac: "Cmd + Option + 0", kw: "cuadro marco lineas" },
+  { title: "Quitar Todos los Bordes", desc: "Elimina cualquier borde en las celdas.", cat: "fmt", win: "Ctrl + Shift + _ (Guión bajo)", mac: "Cmd + Option + -", kw: "limpiar sin marcos blanco" },
   
-  // Fórmulas y Análisis
-  { title: "AutoSuma Instantánea", desc: "Inserta automáticamente la función SUMA detectando el rango adyacente.", cat: "fx", win: "Alt + =", mac: "Cmd + Shift + T", kw: "sumar adicion total" },
-  { title: "Insertar Gráfico Instantáneo", desc: "Genera un gráfico a partir del rango activo.", cat: "fx", win: "Alt + F1", mac: "F11", kw: "barras lineas chart visual" },
-  { title: "Alternar Mostrar Fórmulas", desc: "Muestra las fórmulas subyacentes en las celdas en lugar de los resultados.", cat: "fx", win: "Ctrl + `", mac: "Ctrl + `", kw: "ver codigo sintaxis" },
-  { title: "Convertir en Tabla Estructurada", desc: "Transforma un rango de datos en una Tabla oficial con diseño y filtros.", cat: "fx", win: "Ctrl + T", mac: "Cmd + T", kw: "tabla oficial diseno matriz" },
-  { title: "Activar / Desactivar Filtros", desc: "Añade o remueve las flechas de filtrado en la fila de encabezados.", cat: "fx", win: "Ctrl + Shift + L", mac: "Cmd + Shift + F", kw: "ordenar filtrar embudo" },
-  { title: "Desplegar Menú de Filtro", desc: "Estando en el encabezado, abre las opciones de ordenación y filtro.", cat: "fx", win: "Alt + Flecha Abajo", mac: "Option + Flecha Abajo", kw: "desplegar lista filtro" },
-  { title: "Menú Análisis Rápido", desc: "Acceso instantáneo a formato condicional, gráficos y totales.", cat: "fx", win: "Ctrl + Q", mac: "N/A", kw: "herramientas express totales" },
-  { title: "Actualizar Todo (Tablas Dinámicas)", desc: "Fuerza el recálculo y actualización de datos de todas las fuentes.", cat: "fx", win: "Ctrl + Alt + F5", mac: "Cmd + Option + L", kw: "refresh recargar dinamica" },
+  // ➗ FÓRMULAS Y ANÁLISIS
+  { title: "AutoSuma Instantánea", desc: "Inserta la función SUMA detectando el rango.", cat: "fx", win: "Alt + =", mac: "Cmd + Shift + T", kw: "sumar adicion total" },
+  { title: "Insertar Gráfico (Misma Hoja)", desc: "Genera un gráfico a partir del rango activo.", cat: "fx", win: "Alt + F1", mac: "Fn + Alt + F1", kw: "barras lineas chart visual" },
+  { title: "Insertar Gráfico (Hoja Nueva)", desc: "Genera el gráfico en una pestaña independiente.", cat: "fx", win: "F11", mac: "F11", kw: "grafica full gigante" },
+  { title: "Mostrar/Ocultar Fórmulas", desc: "Visualiza la sintaxis en vez del resultado.", cat: "fx", win: "Ctrl + ` (Acento grave)", mac: "Ctrl + `", kw: "ver codigo sintaxis auditoria" },
+  { title: "Convertir en Tabla Oficial", desc: "Transforma el rango en Tabla con diseño.", cat: "fx", win: "Ctrl + T (o Ctrl+Q)", mac: "Cmd + T", kw: "diseno matriz formato" },
+  { title: "Análisis Rápido", desc: "Menú instantáneo para totales, formatos y minigráficos.", cat: "fx", win: "Ctrl + Q", mac: "N/A", kw: "herramientas express totales popup" },
+  { title: "Expandir Barra de Fórmulas", desc: "Da más espacio si la fórmula es muy larga.", cat: "fx", win: "Ctrl + Shift + U", mac: "Ctrl + Shift + U", kw: "crecer agrandar texto" },
+  { title: "Cuadro Insertar Función", desc: "Abre el asistente de búsqueda de funciones.", cat: "fx", win: "Shift + F3", mac: "Fn + Shift + F3", kw: "fx buscar matematica" },
+  { title: "Administrador de Nombres", desc: "Abre el panel para variables y rangos nombrados.", cat: "fx", win: "Ctrl + F3", mac: "Cmd + F3", kw: "nombres etiquetas variables" },
+  { title: "Crear Nombres desde Selección", desc: "Nombra rangos basándose en los encabezados.", cat: "fx", win: "Ctrl + Shift + F3", mac: "Cmd + Shift + F3", kw: "etiquetas automaticas nombres" },
+  { title: "Calcular Todo el Libro", desc: "Fuerza el recálculo de fórmulas si está en Manual.", cat: "fx", win: "F9", mac: "Fn + F9", kw: "procesar refrescar update" },
+  { title: "Calcular Hoja Activa", desc: "Recalcula solo la pestaña en la que estás.", cat: "fx", win: "Shift + F9", mac: "Fn + Shift + F9", kw: "procesar local update" },
+  { title: "Evaluar Parte de Fórmula", desc: "Calcula solo el fragmento sombreado (en modo edición).", cat: "fx", win: "F9 (en edición)", mac: "Fn + F9", kw: "test prueba fragmento" },
+  { title: "Argumentos de Función", desc: "Abre la ayuda de variables de la función actual.", cat: "fx", win: "Ctrl + A (tras escribir función)", mac: "Ctrl + A", kw: "ayuda variables parametros" },
   
-  // Archivos
-  { title: "Guardar Libro", desc: "Guarda los cambios realizados en el archivo activo.", cat: "file", win: "Ctrl + G (Español) / Ctrl + S (Inglés)", mac: "Cmd + S", kw: "save respaldar" },
-  { title: "Abrir Libro", desc: "Despliega el menú para abrir un archivo preexistente.", cat: "file", win: "Ctrl + A (Español) / Ctrl + O (Inglés)", mac: "Cmd + O", kw: "open archivo carpetas" },
-  { title: "Nuevo Libro", desc: "Crea una nueva instancia de libro de trabajo en blanco.", cat: "file", win: "Ctrl + U (Español) / Ctrl + N (Inglés)", mac: "Cmd + N", kw: "new blanco crear" },
-  { title: "Buscar Dato", desc: "Despliega la ventana de búsqueda dentro del libro.", cat: "file", win: "Ctrl + B (Español) / Ctrl + F (Inglés)", mac: "Cmd + F", kw: "find localizar palabras" },
-  { title: "Reemplazar Dato", desc: "Abre la herramienta para buscar y sustituir valores de forma masiva.", cat: "file", win: "Ctrl + L (Español) / Ctrl + H (Inglés)", mac: "Cmd + H", kw: "sustituir cambiar masivo" }
+  // 📊 DATOS, FILTROS Y TABLAS
+  { title: "Filtros (Activar/Desactivar)", desc: "Añade o remueve embudos en los encabezados.", cat: "data", win: "Ctrl + Shift + L", mac: "Cmd + Shift + F", kw: "ordenar embudo limpieza" },
+  { title: "Desplegar Filtro/Lista", desc: "Abre el menú desplegable en un encabezado.", cat: "data", win: "Alt + Flecha Abajo", mac: "Option + Flecha Abajo", kw: "menu ordenar sorting" },
+  { title: "Agrupar Filas/Columnas", desc: "Crea grupos colapsables de celdas.", cat: "data", win: "Shift + Alt + Flecha Der.", mac: "Cmd + Shift + K", kw: "esquema colapsar esquema" },
+  { title: "Desagrupar Filas/Columnas", desc: "Rompe un grupo de celdas existente.", cat: "data", win: "Shift + Alt + Flecha Izq.", mac: "Cmd + Shift + J", kw: "romper esquema separar" },
+  { title: "Actualizar Tablas Dinámicas", desc: "Refresca la caché de las dinámicas actuales.", cat: "data", win: "Alt + F5", mac: "Option + F5", kw: "refresh recargar pivot" },
+  { title: "Actualizar Todo (Libro)", desc: "Refresca todas las consultas, conexiones y TD.", cat: "data", win: "Ctrl + Alt + F5", mac: "Cmd + Option + R", kw: "refresh global power query" },
+  { title: "Mostrar Detalles (Dinámica)", desc: "Doble clic (o atajo) para ver origen de un dato (Drill-down).", cat: "data", win: "Doble Clic / Enter", mac: "Doble Clic", kw: "desglose origen drill down" },
+  
+  // 👁️ VISTA Y VENTANAS
+  { title: "Nueva Ventana", desc: "Abre una segunda vista del mismo archivo.", cat: "view", win: "Alt + V + N (Secuencia)", mac: "N/A", kw: "clonar monitor doble" },
+  { title: "Cambiar entre Libros", desc: "Salta al siguiente archivo de Excel abierto.", cat: "view", win: "Ctrl + Tab", mac: "Cmd + `", kw: "ventanas multitarea" },
+  { title: "Libro Anterior", desc: "Salta al archivo de Excel abierto anteriormente.", cat: "view", win: "Ctrl + Shift + Tab", mac: "Cmd + Shift + `", kw: "ventanas multitarea previo" },
+  { title: "Maximizar Ventana", desc: "Maximiza la ventana de la hoja de cálculo.", cat: "view", win: "Ctrl + F10", mac: "N/A", kw: "pantalla completa grande" },
+  { title: "Restaurar Ventana", desc: "Devuelve la ventana a su tamaño original.", cat: "view", win: "Ctrl + F5", mac: "N/A", kw: "achicar reducir" },
+  { title: "Zoom Acercar/Alejar", desc: "Rueda el ratón para hacer zoom rápido.", cat: "view", win: "Ctrl + Rueda Ratón", mac: "Cmd + Option + Rueda", kw: "lupa grande pequeno" },
+  { title: "Ocultar Ventana Actual", desc: "Oculta el libro completo de la vista.", cat: "view", win: "Ctrl + 9 (a nivel ventana no estándar, usa menú)", mac: "Cmd + H", kw: "esconder archivo panic" },
+  
+  // 📁 ARCHIVOS Y SISTEMA
+  { title: "Guardar Libro", desc: "Guarda los cambios rápidamente.", cat: "file", win: "Ctrl + G (Español) / Ctrl + S", mac: "Cmd + S", kw: "save respaldar disco" },
+  { title: "Abrir Archivo", desc: "Menú para abrir un archivo preexistente.", cat: "file", win: "Ctrl + A (Español) / Ctrl + O", mac: "Cmd + O", kw: "open carpetas buscar" },
+  { title: "Nuevo Libro en Blanco", desc: "Crea un archivo nuevo vacío al instante.", cat: "file", win: "Ctrl + U (Español) / Ctrl + N", mac: "Cmd + N", kw: "new crear cero" },
+  { title: "Cerrar Libro (Archivo)", desc: "Cierra el archivo actual sin salir de Excel.", cat: "file", win: "Ctrl + R (Español) / Ctrl + W", mac: "Cmd + W", kw: "salir apagar close" },
+  { title: "Cerrar Todo Excel", desc: "Cierra la aplicación por completo.", cat: "file", win: "Alt + F4", mac: "Cmd + Q", kw: "quit kill salir" },
+  { title: "Buscar Texto", desc: "Abre el cuadro para localizar valores.", cat: "file", win: "Ctrl + B (Español) / Ctrl + F", mac: "Cmd + F", kw: "find localizar lupa palabra" },
+  { title: "Reemplazar Texto", desc: "Buscar y sustituir de forma masiva.", cat: "file", win: "Ctrl + L (Español) / Ctrl + H", mac: "Cmd + H", kw: "sustituir cambiar masivo swap" },
+  { title: "Buscar Siguiente", desc: "Va al siguiente resultado de tu búsqueda.", cat: "file", win: "Shift + F4", mac: "Cmd + G", kw: "next repeticion saltar" },
+  { title: "Buscar Anterior", desc: "Retrocede al resultado previo de búsqueda.", cat: "file", win: "Ctrl + Shift + F4", mac: "Cmd + Shift + G", kw: "previo back" },
+  
+  // 🤖 MACROS Y DESARROLLADOR
+  { title: "Editor de Visual Basic (VBA)", desc: "Abre el entorno de programación de Excel.", cat: "macro", win: "Alt + F11", mac: "Fn + Option + F11", kw: "codigo vba script programar" },
+  { title: "Cuadro de Macros", desc: "Lista de macros para ejecutar, editar o borrar.", cat: "macro", win: "Alt + F8", mac: "Fn + Option + F8", kw: "lista rutinas automatizar" },
+  { title: "Ejecutar Código Paso a Paso", desc: "Dentro de VBA, depura línea por línea.", cat: "macro", win: "F8 (En VBA)", mac: "Cmd + Shift + I", kw: "debug depurar pruebas" },
+  { title: "Ver Examinador de Objetos", desc: "Dentro de VBA, abre la biblioteca de objetos.", cat: "macro", win: "F2 (En VBA)", mac: "Cmd + Shift + B", kw: "libreria f2 clases" },
+  { title: "Ventana Inmediato", desc: "Dentro de VBA, abre la consola para código rápido.", cat: "macro", win: "Ctrl + G (En VBA)", mac: "Cmd + G", kw: "consola debug print" },
+  { title: "Cerrar VBA y Volver", desc: "Cierra el editor y regresa a la hoja de cálculo.", cat: "macro", win: "Alt + Q", mac: "Cmd + Q", kw: "regresar salir codigo" }
 ];
 
 const CATS = [
   { id: "all", label: "📋 Todos" },
   { id: "bas", label: "🧰 Esenciales" },
-  { id: "nav", label: "🧭 Navegación y Selección" },
-  { id: "edit", label: "✏️ Edición y Captura" },
-  { id: "fmt", label: "🎨 Formato de Celdas" },
-  { id: "fx", label: "➗ Fórmulas y Análisis" },
-  { id: "file", label: "📁 Gestión de Archivos" }
+  { id: "nav", label: "🧭 Navegación" },
+  { id: "edit", label: "✏️ Edición" },
+  { id: "fmt", label: "🎨 Formato" },
+  { id: "fx", label: "➗ Fórmulas" },
+  { id: "data", label: "📊 Datos y Filtros" },
+  { id: "view", label: "👁️ Vista" },
+  { id: "file", label: "📁 Archivos" },
+  { id: "macro", label: "🤖 Macros (VBA)" }
 ];
 
 const $ = id => document.getElementById(id);
@@ -117,7 +184,7 @@ function highlight(text, q){
 }
 function renderCombo(combo, q){
   if(combo === 'N/A') return '<span class="key-chip na-chip">N/A</span>';
-  if(/ \/ |\(luego|\(Español|\(Inglés|\(o Fn/.test(combo)){
+  if(/ \/ |\(luego|\(Español|\(Inglés|\(o Fn|\(En|\(a nivel|\(Secuencia/.test(combo)){
     return '<span class="key-chip combo-wide">' + highlight(combo, q) + '</span>';
   }
   return combo.split(' + ').map((p, i) =>
@@ -364,4 +431,3 @@ updateStats();
 paintRecents();
 paintDaily();
 render();
-
