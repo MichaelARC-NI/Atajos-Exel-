@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Palabras Clave -->
+  <title>⚡ Atajos de Excel — Guía Rápida e Interactiva</title>
+  <meta name="description" content="Guía interactiva y rápida con los mejores atajos de teclado para Microsoft Excel en Windows y Mac. Incrementa tu productividad copiando combos al instante.">
+  <meta name="keywords" content="Excel, atajos de excel, shortcuts, cheatsheet excel, guía rápida excel, productividad excel, formulas excel, teclado excel, Windows, Mac, Michael Antonio Rodriguez Condega, AndroidMovil">
+  <meta name="author" content="Michael Antonio Rodriguez Condega">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#107c41">
+
+  <!-- Open Graph para Redes Sociales -->
+  <meta property="og:title" content="⚡ Atajos de Excel — Guía Rápida e Interactiva">
+  <meta property="og:description" content="Encuentra y copia los mejores atajos de teclado para Microsoft Excel en un solo clic. Funciona para Windows y Mac.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+
+  <!-- Favicon e Hoja de Estilos -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Script principal deferido -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>⚡ Atajos de Excel — Guía Rápida</h1>
+    <p>Toca cualquier combinación para copiarla al instante. Busca con <b>/</b> o <b>Ctrl+K</b>, guarda favoritos con ⭐ y recuerda lo que más copias.</p>
+    <div class="hero-stats" id="heroStats"></div>
+    <div class="daily" id="dailyBox"></div>
+  </header>
+
+  <div class="toolbar">
+    <div class="search-wrap" id="searchWrap">
+      <span class="mag">🔍</span>
+      <input type="text" id="searchInput" placeholder="Buscar atajo, descripción o tecla… (ej. Filtrar, Ctrl+1, Pegado especial)" autocomplete="off">
+      <span class="kbd-hint">/</span>
+      <button class="clear" id="clearBtn" title="Limpiar búsqueda" aria-label="Limpiar búsqueda">✕</button>
+    </div>
+    <div class="seg" id="platformSeg" title="Mostrar solo una plataforma">
+      <button data-plat="both" class="active">Ambos</button>
+      <button data-plat="win">🪟 Win</button>
+      <button data-plat="mac">🍎 Mac</button>
+    </div>
+    <button class="tool-btn" id="favBtn">⭐ Favoritos</button>
+    <select class="tool-btn" id="sortSel" title="Ordenar">
+      <option value="def">Orden original</option>
+      <option value="az">A → Z</option>
+      <option value="za">Z → A</option>
+    </select>
+    <button class="tool-btn" id="themeBtn" title="Cambiar tema" aria-label="Cambiar tema">🌙</button>
+  </div>
+
+  <div class="cats" id="cats"></div>
+
+  <div class="recents" id="recentsBox" style="display:none">
+    <div class="rl">🕘 Copiados recientemente — toca para copiar otra vez</div>
+    <div class="chips" id="recentList"></div>
+  </div>
+
+  <div class="result-line" id="resultLine"></div>
+  <div class="grid" id="shortcutsGrid"></div>
+
+  <footer>
+    <div>Documento elaborado por: <strong>Michael Antonio Rodriguez Condega</strong></div>
+    
+    <!-- Redes Sociales y Contacto -->
+    <div class="social-links">
+      <a href="https://t.me/Michael_Antonio_Rodriguez" target="_blank" rel="noopener noreferrer" class="social-btn">
+        ✈️ Telegram
+      </a>
+      <a href="https://www.facebook.com/share/1D1pfVdbXE" target="_blank" rel="noopener noreferrer" class="social-btn">
+        📘 Facebook
+      </a>
+      <a href="https://youtube.com/@androidmovil" target="_blank" rel="noopener noreferrer" class="social-btn">
+        ▶️ YouTube
+      </a>
+      <a href="https://wa.me/50583341349?text=Hola%20Michael" target="_blank" rel="noopener noreferrer" class="social-btn">
+        💬 WhatsApp
+      </a>
+    </div>
+
+    <div class="keys-mini">
+      <span class="key-chip">Ctrl</span><span class="key-plus">+</span><span class="key-chip">F</span>
+      <span class="key-chip">🖱️</span><span class="key-plus">=</span><span class="key-chip">Copiar</span>
+    </div>
+  </footer>
+</div>
+<div id="toast"></div>
+</body>
+</html>
+
